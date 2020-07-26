@@ -28,6 +28,8 @@ const httpServer = (req, res) => {
 
 const server = http.createServer(httpServer);
 
+require('./wsServer/wsServer')(server);
+
 server.listen(PORT, error => {
   if (error) console.error(`Error to start server: ${error}`);
   console.log(`Server ran on port: ${PORT}`)
