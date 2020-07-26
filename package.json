@@ -1,0 +1,25 @@
+{
+  "name": "cloom-video-chat",
+  "version": "1.0.0",
+  "description": "Rooms video chat",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elPoeta/cloom-video-chat.git"
+  },
+  "keywords": [
+    "node",
+    "web-socket"
+  ],
+  "author": "Leonardo Tosetto (leonardo.a.tosetto@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elPoeta/cloom-video-chat/issues"
+  },
+  "homepage": "https://github.com/elPoeta/cloom-video-chat#readme"
+}
