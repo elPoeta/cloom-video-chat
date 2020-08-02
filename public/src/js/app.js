@@ -4,18 +4,16 @@ const joinRoomValue = document.querySelector('#joinRoomValue');
 const roomId = document.querySelector('#roomId');
 const root = document.querySelector('#root');
 
-const newRoom = async e => {
-  const res = await fetch('/room');
-  const { ROOM_ID } = await res.json();
-  console.log(ROOM_ID)
-  roomId.textContent = ROOM_ID;
-  root.innerHTML = `<div id="gridVideo"></div>`;
-  startApp(ROOM_ID);
+const newRoom = e => {
+  init('/room');
 }
 
-const joinRoom = async e => {
+const joinRoom = e => {
   if (joinRoomValue.value == '') return;
-  const res = await fetch(`/joinRoom/${joinRoomValue.value}`);
+  init(`/joinRoom/${joinRoomValue.value}`);
+}
+const init = async url => {
+  const res = await fetch(url);
   const { ROOM_ID } = await res.json();
   roomId.textContent = ROOM_ID;
   root.innerHTML = `<div id="gridVideo"></div>`;

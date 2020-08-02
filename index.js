@@ -12,7 +12,6 @@ app.get('/room', (req, res) => {
   res.json({ ROOM_ID: uuidV4() })
 });
 app.get('/joinRoom/:roomId', (req, res) => {
-  console.log('rooom ', req.params.roomId)
   res.json({ ROOM_ID: req.params.roomId })
 });
 
@@ -20,7 +19,6 @@ io.on('connection', socket => {
   socket.on('join-room', (roomId, userId) => {
     socket.join(roomId)
     socket.to(roomId).broadcast.emit('user-connected', userId)
-
     socket.on('disconnect', () => {
       socket.to(roomId).broadcast.emit('user-disconnected', userId)
     })
