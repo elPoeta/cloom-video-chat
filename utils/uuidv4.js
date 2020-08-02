@@ -16,4 +16,5 @@ function uuidv4() {
   });
 }
 
-console.log(uuidv4());
+module.exports = uuidv4;
+//console.log(uuidv4());

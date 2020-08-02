@@ -5,13 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/css/styles.css">
+  <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js" defer></script>
+  <script src="/socket.io/socket.io.js" defer></script>
   <script src="./src/js/app.js" type="module" defer></script>
   <title>Cloom | video chat</title>
 </head>
 
 <body>
   <h1>Cloom</h1>
-  <div id="gridVideo"></div>
+  <p id="roomId"></p>
+  <main id="root">
+    <button id="newRoom">New Room</button><br />
+    <input type="text" id="joinRoomValue" />
+    <button id="joinRoom">Join Room</button>
+  </main>
+
 </body>
 
 </html>
